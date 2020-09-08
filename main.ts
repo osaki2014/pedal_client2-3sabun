@@ -6,7 +6,7 @@ radio.onReceivedString(function (receivedString) {
 let result = 0
 let id = 0
 radio.setGroup(99)
-id = 1
+id = 2
 let offset = input.rotation(Rotation.Pitch)
 let counter = 2
 let index = counter
