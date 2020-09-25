@@ -6,24 +6,22 @@ radio.onReceivedString(function (receivedString) {
 let result = 0
 let id = 0
 radio.setGroup(99)
-id = 4
+id = 1
 let offset = input.rotation(Rotation.Pitch)
-let counter = 2
-let index = counter
 basic.forever(function () {
-    if (offset - input.rotation(Rotation.Pitch) <= 3) {
+    if (input.rotation(Rotation.Pitch) - offset <= 8) {
         result = 1
     }
-    if (input.rotation(Rotation.Pitch) - offset > 3) {
+    if (input.rotation(Rotation.Pitch) - offset > 8) {
         result = 2
     }
-    if (input.rotation(Rotation.Pitch) - offset > 7) {
+    if (input.rotation(Rotation.Pitch) - offset > 18) {
         result = 3
     }
-    if (input.rotation(Rotation.Pitch) - offset > 11) {
+    if (input.rotation(Rotation.Pitch) - offset > 28) {
         result = 4
     }
-    if (input.rotation(Rotation.Pitch) - offset > 13) {
+    if (input.rotation(Rotation.Pitch) - offset > 33) {
         result = 5
     }
     basic.showNumber(result)
