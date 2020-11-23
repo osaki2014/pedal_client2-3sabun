@@ -6,7 +6,7 @@ radio.onReceivedString(function (receivedString) {
 let result = 0
 let id = 0
 radio.setGroup(99)
-id = 1
+id = 3
 let offset = input.rotation(Rotation.Pitch)
 basic.forever(function () {
     if (input.rotation(Rotation.Pitch) - offset <= 8) {
